@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>State Capitals Game!</title>
+
+	<style type="text/css">
+
+		.header{
+			margin-left: 490px;
+			font-family: Impact;
+		}
+		.enter{
+			margin-top: 5px;
+		}
+		.batchOne{
+			float: left;
+		}
+		.batchTwo{
+			float: left;
+		}
+		.batchThree{
+			float: left;
+		}
+
+	</style>
+
+	<script src="http://saasmath.seattleacademy.org/js/jquery-2.1.1.min.js"></script>
+	<script>
+
+		var alabama = {
+			capital: "montgomery"
+		}
+		var alaska = {
+			capital: "juneau"
+		}
+		var arizona = {
+			capital: "phoenix"
+		}
+		var arkansas = {
+			capital: "little Rock"
+		}
+		var california = {
+			capital: "sacramento"
+		}
+		var colorado = {
+			capital: "dever"
+		}
+		var connecticut = {
+			capital: "hartford"
+		}
+		var delaware = {
+			capital: "dover"
+		}
+		var florida = {
+			capital: "tallahassee"
+		}
+		var georgia = {
+			capital: "atlanta"
+		}
+		var hawaii = {
+			capital: "honolulu"
+		}
+		var idaho = {
+			capital: "boise"
+		}
+		var illanois = {
+			capital: "springfield"
+		}
+		var indiana = {
+			capital: "indianapolis"
+		}
+		var iowa = {
+			capital: "des Moines"
+		}
+		var kansas = {
+			capital: "topeka"
+		}
+		var kentucky = {
+			capital: "frankfort"
+		}
+		var louisiana = {
+			capital: "baton rouge"
+		}
+		var maine = {
+			capital: "augusta"
+		}
+		var maryland = {
+			capital: "annapolis"
+		}
+		var massachusetts = {
+			capital: "boston"
+		}
+		var michigan = {
+			capital: "lansing"
+		}
+		var minnesota = {
+			capital: "saint saul"
+		}
+		var mississippi = {
+			capital: "jackson"
+		}
+		var missouri = {
+			capital: "jefferson City"
+		}
+		var montana = {
+			capital: "helena"
+		}
+		var nebraska = {
+			capital: "lincoln"
+		}
+		var nevada = {
+			capital: "carson city"
+		}
+		var nh = {
+			capital: "concord",
+			origin: "New Hampshire"
+		}
+		var nm = {
+			capital: "santa Fe",
+			origin: "New Mexico"
+		}
+		var nj = {
+			capital: "trenton",
+			origin: "New Jersey"
+		}
+		var ny = {
+			capital: "albany"
+		}
+		var nc = {
+			capital: "raleigh"
+		}
+
+		var states = [nh,nm,nj];
+
+		$(function(){
+
+			$("#submit").click(function(){
+				var x = document.getElementById("form1").value;
+				x = x.toLowerCase();
+				//console.log(x)
+				var z = "trenton";
+
+				var n = $("#trenton").text();
+				console.log(n[1]);
+				
+				for(i=0; i<3; i+=1){
+					if(x==states[i].capital){
+						console.log("working");
+						switch(x){
+							case "trenton":
+								$("#nj").wrap("<strike>");
+								break;
+							case "albequerque":
+								$("#nm").wrap("<strike>");
+								break;
+							case "concord":
+								$("#nh").wrap("<strike>");
+								break;
+
+						}
+					}
+				}
+
+			});
+
+
+		});
+
+	</script>
+
+</head>
+
+<body>
+	
+	<div class="header">
+		<h1>State Capitals Game!</h1>
+	</div>
+
+	<hr />
+
+	<div class="typing">
+		<form>
+			<input type="text" placeholder="type here..." name="enter" id="form1" />
+		</form>
+	</div>
+
+	<div class="enter">
+		<button id="submit">Enter</button>
+	</div>
+
+	<div class="batchOne">
+		<ul>
+			<li><span id="1"></span></li>
+			<li><span id="alabama">Alabama</span></li>
+			<li><span id="alaska">Alaska</span></li>
+			<li><span id="arizona">Arizona</span></li>
+			<li><span id="arkansas">Arkansas</span></li>
+			<li><span id="california">California</span></li>
+			<li><span id="colorado">Colorado</span></li>
+			<li><span id="connecticut">Connecticut</span></li>
+			<li><strike><span id="delaware1"></span></strike><span id="delaware">Delaware</span></li>
+			<li><span id="florida">Florida</span></li>
+			<li><span id="georgia">Georgia</span></li>
+			<li><span id="hawaii">Hawaii</span></li>
+			<li><span id="idaho">Idaho</span></li>
+			<li><span id="illanois">Illanois</span></li>
+			<li><span id="indiana">Indiana</span></li>
+			<li><span id="iowa">Iowa</span></li>
+			<li><span id="kansas">Kansas</span></li>
+			<li><span id="kentucky">Kentucky</span></li>
+			<li><span id="louisiana">Louisiana</span></li>
+			<li><span id="maine">Maine</span></li>
+			<li><span id="maryland">Maryland</span></li>
+		</ul>
+	</div>
+
+	<div class="batchTwo">
+		<ul>
+			<li><span id="massachusetts">Massachusetts</span></li>
+			<li><span id="michigan">Michigan</span></li>
+			<li><span id="minnesota">Minnesota</span></li>
+			<li><span id="mississippi">Mississippi</span></li>
+			<li><span id="missouri">Missouri</span></li>
+			<li><span id="montana">Montana</span></li>
+			<li><span id="nebraska">Nebraska</span></li>
+			<li><span id="nevada">Nevada</span></li>
+			<li><span id="nh">New Hampshire</span></li>
+			<li><span id="nj">New Jersey</span></li>
+			<li><span id="nm">New Mexico</span></li>
+			<li><span id="ny">New York</span></li>
+			<li><span id="nc">North Carolina</span></li>
+			<li><span id="nd">North Dakota</span></li>
+			<li><span id="ohio">Ohio</span></li>
+			<li><span id="oklahoma">Oklahoma</span></li>
+			<li><span id="oregon">Oregon</span></li>
+			<li><span id="pennsylvannia">Pennsylvannia</span></li>
+			<li><span id="ri">Rhode Island</span></li>
+			<li><span id="sc">South Carolina</span></li>
+		</ul>
+	</div>
+
+	<div class="batchThree">
+		<ul>
+			<li><span id="sd">South Dakota</span></li>
+			<li><span id="tennessee">Tennessee</span></li>
+			<li><span id="texas">Texas</span></li>
+			<li><span id="utah">Utah</span></li>
+			<li><span id="vermont">Vermont</span></li>
+			<li><span id="virginia">Virginia</span></li>
+			<li><span id="washington">Washington</span></li>
+			<li><span id="wv">West Virginia</span></li>
+			<li><span id="wisconsin">Wisconsin</span></li>
+			<li><span id="wyoming">Wyoming</span></li>
+		</ul>
+	</div>
+
+
+</body>
+
+</html>
